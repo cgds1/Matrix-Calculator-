@@ -74,7 +74,7 @@ Desarrollar una aplicación web interactiva que permita realizar operaciones mat
 
 ## 📅 Fecha de entrega
 
-**28 de mayo de 2025**
+**11 de junio de 2025**
 
 ---
 
