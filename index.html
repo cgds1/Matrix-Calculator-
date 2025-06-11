@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Matrices</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Calculadora de Matrices</h1>
+    <p>Universidad Rafael Urdaneta · Lenguaje de Clientes Web</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <label for="size">Tamaño n×n:</label>
+      <select id="size">
+        <option value="2">2×2</option>
+        <option value="3">3×3</option>
+        <option value="4">4×4</option>
+        <option value="5">5×5</option>
+        <option value="6">6×6</option>
+        <option value="7">7×7</option>
+        <option value="8">8×8</option>
+        <option value="9">9×9</option>
+        <option value="10">10×10</option>
+      </select>
+
+      <button id="rand">Aleatorio</button>
+      <button id="example">Ejemplo</button>
+      <button id="clear">Limpiar</button>
+    </section>
+
+    <section class="matrices">
+      <div class="matrix-container">
+        <h2>Matriz A</h2>
+        <div id="matrixA" class="matrix-grid"></div>
+      </div>
+
+      <div class="matrix-container">
+        <h2>Matriz B</h2>
+        <div id="matrixB" class="matrix-grid"></div>
+      </div>
+    </section>
+
+    <section class="operations">
+      <h2>Operaciones</h2>
+      <div class="buttons">
+        <button data-op="add">A + B</button>
+        <button data-op="subtract">A - B</button>
+        <button data-op="subtractBA">B - A</button>
+        <button data-op="multiply">A × B</button>
+        <button data-op="scalar">k × A</button>
+        <button data-op="transpose">Transpuesta A</button>
+        <button data-op="determinant">Det(A)</button>
+        <button data-op="inverse">Inversa A</button>
+        <button data-op="identity">Identidad</button>
+      </div>
+    </section>
+
+    <section id="result-section">
+      <h2>Resultado</h2>
+      <div id="result" class="matrix-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Proyecto Web URU</p>
+  </footer>
+
+  <script type="module" src="./js/ui.js"></script>
+</body>
+
+</html>

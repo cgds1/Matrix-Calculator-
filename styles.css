@@ -1,0 +1,146 @@
+:root {
+    --primary: #2d3e50;
+    --accent: #4caf50;
+    --bg: #f4f4f9;
+    --matrix-bg: #fff;
+    --input-border: #ccc;
+    --max-width: 1000px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: #333;
+    padding: 20px;
+}
+
+header,
+footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+main {
+    max-width: var(--max-width);
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.controls,
+.operations,
+.matrices,
+#result-section {
+    margin-top: 20px;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.controls label {
+    font-weight: bold;
+}
+
+.controls select,
+.controls button {
+    padding: 6px 12px;
+    border: 1px solid var(--input-border);
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.controls button:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+.matrices {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.matrix-container {
+    flex: 1 1 100%;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.matrix-grid {
+    display: grid;
+    gap: 5px;
+    margin-top: 10px;
+    justify-content: start;
+    width: fit-content;
+    min-width: max-content;
+}
+
+.matrix-grid input {
+    padding: 6px;
+    text-align: center;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    background-color: var(--matrix-bg);
+    width: 50px;
+}
+
+.operations .buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.operations button {
+    padding: 10px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.operations button:hover {
+    background-color: #1a2533;
+}
+
+#result-section {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+#result {
+    display: grid;
+    gap: 5px;
+    width: fit-content;
+    min-width: max-content;
+    justify-content: start;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #777;
+}
